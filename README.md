@@ -1,4 +1,4 @@
-# RESTArt
+# RESTArt-Falcon
 
 A RESTArt extension for integrating [RESTArt][1] into [Falcon][2], which has the benefit of high performance.
 
