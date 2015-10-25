@@ -14,7 +14,7 @@ A RESTArt extension for integrating [RESTArt][1] into [Falcon][2], which has the
 
 ### Codebase
 
-Pure `RESTArt` API:
+The pure `RESTArt` API:
 
 ```python
 from restart.api import RESTArt
@@ -23,7 +23,7 @@ from restart.serving import Service
 
 api = RESTArt()
 
-@api.route(method=['GET'])
+@api.route(methods=['GET'])
 class Action(Resource):
     name = 'action'
 
@@ -33,7 +33,7 @@ class Action(Resource):
 app = Service(api)
 ```
 
-`RESTArt-Falcon` API:
+The `RESTArt-Falcon` API:
 
 ```python
 from restart.api import RESTArt
@@ -43,7 +43,7 @@ from restart.ext.falcon.adapter import FalconAdapter
 
 api = RESTArt()
 
-@api.route(method=['GET'])
+@api.route(methods=['GET'])
 class Action(Resource):
     name = 'action'
 
@@ -53,7 +53,7 @@ class Action(Resource):
 app = Service(api, FalconAdapter)
 ```
 
-`Falcon` API:
+The pure `Falcon` API:
 
 ```python
 import falcon
