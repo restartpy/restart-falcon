@@ -10,6 +10,20 @@ A RESTArt extension for integrating [RESTArt][1] into [Falcon][2], which has the
 **Cons**: The Werkzeug-style converters (with the separator `:`) is not supported in `RESTArt-Falcon`. Captured parameters in URI can only be specified in the form of `<arg>`, which will be automatically converted to Falcon-style `{arg}`.
 
 
+Installation
+------------
+
+Install `RESTArt-Falcon` with `pip`:
+
+    $ pip install RESTArt-Falcon
+
+Install development version from `GitHub`:
+
+    $ git clone https://github.com/RussellLuo/restart-falcon.git
+    $ cd restart-falcon
+    $ python setup.py install
+
+
 ## Benchmarks
 
 ### Codebase
