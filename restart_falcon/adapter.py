@@ -47,7 +47,7 @@ class FalconAdapter(Adapter):
     def wsgi_app(self, environ, start_response):
         """The actual Falcon-specific WSGI application.
 
-        See :meth:`~restart.seving.Service.wsgi_app` for the
+        See :meth:`~restart.serving.Service.wsgi_app` for the
         meanings of the parameters.
         """
         return self.falcon_api(environ, start_response)
@@ -56,7 +56,7 @@ class FalconAdapter(Adapter):
         """Get the Falcon-specific rules used to be embedded into
         an existing or legacy application.
 
-        Usage:
+        Example:
 
             # The existing Falcon API
             import falcon
@@ -73,7 +73,7 @@ class FalconAdapter(Adapter):
             from restart.ext.falcon.adapter import FalconAdapter
             service = Service(api, FalconAdapter)
             for uri, resource in service.embedded_rules:
-                app.add_route(ui, resource)
+                app.add_route(uri, resource)
         """
         rules = []
         for endpoint, rule in iteritems(self.adapted_rules):
